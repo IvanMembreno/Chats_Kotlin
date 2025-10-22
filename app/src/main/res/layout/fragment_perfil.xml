@@ -1,22 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".Fragmentos.FragmentPerfil">
+    tools:context=".Fragmentos.FragmentPerfil"
+    >
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_cerrarSesion"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/btn_cerrarSesion"
-        android:textColor="@color/negro"
-        android:textStyle="bold"
-        android:backgroundTint="@color/verdeClaro"
-        android:layout_gravity="center"
-        android:textAllCaps="true"
-        app:cornerRadius="10dp"
-        />
+        android:layout_margin="20dp"
+        >
 
-</FrameLayout>
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_perfil"
+            android:src="@drawable/icon_image_perfil"
+            android:scaleType="centerCrop"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_centerHorizontal="true"
+
+            />
+
+        <!-- Nombres -->
+        <TextView
+            android:id="@+id/txt_nombres"
+            android:text="@string/txt_nombres"
+            android:layout_below="@+id/iv_perfil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            />
+        <!-- Email -->
+        <TextView
+            android:id="@+id/txt_email"
+            android:text="@string/txt_email"
+            android:layout_below="@+id/txt_nombres"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            />
+        <!-- proveedor -->
+        <TextView
+            android:id="@+id/txt_proveedor"
+            android:text="@string/txt_proveedor"
+            android:layout_below="@+id/txt_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            />
+        <!-- tiempo registrado -->
+        <TextView
+            android:id="@+id/txt_t_registro"
+            android:text="@string/txt_t_registro"
+            android:layout_below="@+id/txt_proveedor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            />
+
+        <!-- Boton de cerrar sesion-->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_cerrarSesion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/txt_t_registro"
+            android:backgroundTint="@color/morado"
+            android:text="@string/btn_cerrarSesion"
+            android:textAllCaps="true"
+            android:textColor="@color/blanco"
+            android:textStyle="bold"
+            app:cornerRadius="10dp" />
+    </RelativeLayout>
+</ScrollView>

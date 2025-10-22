@@ -35,8 +35,6 @@ class FragmentPerfil : Fragment() {
             startActivity(Intent(context, OpcionesLoginActivity::class.java))
             activity?.finishAffinity()
         }
-
-        binding = FragmentPerfilBinding.inflate(layoutInflater, container, false)
         return binding.root
     }
 }

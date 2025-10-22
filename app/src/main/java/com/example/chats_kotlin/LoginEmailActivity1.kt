@@ -12,10 +12,10 @@ class LoginEmailActivity1 : AppCompatActivity() {
     private lateinit var binding: EmailLoginAntivityBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        binding = EmailLoginAntivityBinding.inflate((layoutInflater))
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
+        binding = EmailLoginAntivityBinding.inflate((layoutInflater))
         setContentView(binding.root)
+//        enableEdgeToEdge()
 
     }
 }

@@ -28,7 +28,7 @@ class RegistroEmailActivity : AppCompatActivity() {
 
 
 
-        enableEdgeToEdge()
+//        enableEdgeToEdge()
         setContentView(binding.root)
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
