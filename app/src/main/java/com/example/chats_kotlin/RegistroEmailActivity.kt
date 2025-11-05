@@ -20,7 +20,6 @@ class RegistroEmailActivity : AppCompatActivity() {
     private lateinit var progressDialog: ProgressDialog
 
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -48,6 +47,9 @@ class RegistroEmailActivity : AppCompatActivity() {
         binding.btnRegistrar.setOnClickListener{
             validarInformacion()
         }
+
+
+
     }
     //-------------------------------------------------------------------------------------------------
 
@@ -105,6 +107,7 @@ class RegistroEmailActivity : AppCompatActivity() {
         datosUsuarios["tiempoR"] = "$tiempoR"
         datosUsuarios["proveedor"] = "Email"
         datosUsuarios["estado"] = "online"
+        datosUsuarios["imagen"] = ""
 
         // GUARDAREMOS LA INFORAMCION EN FIREBASE
         val reference = FirebaseDatabase.getInstance().getReference("Usuarios")

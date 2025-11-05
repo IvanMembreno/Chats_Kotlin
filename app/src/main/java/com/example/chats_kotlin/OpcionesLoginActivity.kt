@@ -1,5 +1,6 @@
 package com.example.chats_kotlin
 
+import android.annotation.SuppressLint
 import android.app.ProgressDialog
 import android.content.Intent
 import android.os.Bundle
@@ -92,6 +93,7 @@ class OpcionesLoginActivity : AppCompatActivity() {
             }
         }
 
+    @SuppressLint("SuspiciousIndentation")
     private fun autenticarCuentaGoogle(idToken: String?) {
         val credential = GoogleAuthProvider.getCredential(idToken, null)
             firebaseAuth.signInWithCredential(credential)
@@ -127,6 +129,7 @@ class OpcionesLoginActivity : AppCompatActivity() {
         datosUsuarios["tiempoR"] = "$tiempoR"
         datosUsuarios["proveedor"] = "Google"
         datosUsuarios["estado"] = "online"
+        datosUsuarios["imagen"] = ""
 
         // GUARDAREMOS LA INFORAMCION EN FIREBASE
         val reference = FirebaseDatabase.getInstance().getReference("Usuarios")
